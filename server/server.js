@@ -4,3 +4,5 @@ const app = express();
 app.use(express.static('./server/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+let aBriefHistoryOfMath = [];
