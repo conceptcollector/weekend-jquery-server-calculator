@@ -1,8 +1,14 @@
+body {
+    background-color: gray;
+}
+
 h1 {
+    color: white;
     text-align: center;
 }
 
-#screen {
+p {
+    color: white;
     text-align: center;
 }
 
@@ -10,6 +16,12 @@ h1 {
     text-align: center;
 }
 
+button {
+    background-color: orange;
+    color: white;
+}
+
 ul {
+    color: white;
     list-style: none;
 }

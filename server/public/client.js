@@ -5,6 +5,7 @@ $(document).ready(onReady);
 function onReady() {
     $('.operator').on('click', operate);
     $('#equals').on('click', doMath);
+    $('#clear').on('click', clearHistory)
 }
 
 function operate() {
@@ -35,13 +36,18 @@ function languageOfTheUniverse(){
     }).then(function(response){
       console.log('the server sent me something');
       console.log(response);
-      $('#screen').empty();
+      $('#output').empty();
       $('#equations').empty();
-      $('#screen').append(`${response[response.length-1].solution}`);
+      $('#output').append(`${response[response.length-1].solution}`);
       for (let thisMath of response) {
         $('#equations').append(`<li>
         ${thisMath.firstNumber} ${thisMath.operator} ${thisMath.secondNumber} = ${thisMath.solution}
         <li>`);
       }
     })
+  }
+
+  function clearHistory() {
+    $('#firstNumber').val('');
+    $('#secondNumber').val('');
   }
