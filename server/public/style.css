@@ -1,5 +1,13 @@
 body {
+    background-image: url('math-curriculum.jpeg');
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.two {
     background-color: gray;
+    min-height: 100vh;
 }
 
 h1 {
